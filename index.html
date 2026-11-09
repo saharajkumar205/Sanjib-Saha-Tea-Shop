@@ -3,19 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radha Govindo Tea Stall | Quality Loose Tea & Daily Supplies</title>
+  <title>Radha Govindo Tea Stall | Loose Tea & Daily Supplies in Santipur</title>
+  <meta name="description" content="Radha Govindo Tea Stall, Netaji Subhas Road, Near Dakghar Bus Stop, Santipur (WB 741404). Retail and wholesale suppliers of premium loose CTC tea, packaged milk powder, and disposable plates & bowls. Over 50 years of service.">
+  <meta name="keywords" content="Radha Govindo Tea Stall, Santipur tea stall, loose tea Santipur, CTC tea Nadia, disposable plates Santipur, Dakghar bus stop tea">
   <style>
-    :root {
-      --primary: #8b4513;        /* Warm tea brown */
-      --primary-dark: #5c2c0a;   /* Deep roasted brown */
-      --accent: #d4a373;         /* Biscuit / clay accent */
-      --bg: #fefae0;             /* Soft cream page background */
-      --card-bg: #ffffff;
-      --text: #283618;
-      --text-muted: #606c38;
-      --whatsapp: #25d366;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,16 +15,16 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: #fefae0;
+      color: #283618;
       line-height: 1.6;
       padding-bottom: 70px;
     }
 
     /* Navigation Header Banner */
     nav {
-      background: var(--primary-dark);
-      color: #fff;
+      background-color: #5c2c0a !important;
+      color: #ffffff !important;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -41,58 +32,61 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      width: 100%;
     }
 
-    nav .logo {
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 16px;
     }
 
-    nav .logo img {
-      height: 65px;
+    .nav-brand img {
+      height: 75px;
       width: auto;
       display: block;
       border-radius: 6px;
+      background: #ffffff;
     }
 
-    nav .shop-title {
-      font-size: 1.8rem;
+    .shop-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
       font-weight: 900;
-      letter-spacing: 2px;
-      color: #ffffff;
+      letter-spacing: 2.5px;
+      color: #ffffff !important;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    nav .nav-links {
+    .nav-links {
       display: flex;
       gap: 1.5rem;
     }
 
-    nav .nav-links a {
-      color: #faedcd;
+    .nav-links a {
+      color: #faedcd !important;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       transition: color 0.2s;
     }
 
-    nav .nav-links a:hover {
-      color: #ffffff;
+    .nav-links a:hover {
+      color: #ffffff !important;
     }
 
-    /* Hero Section with Auto-Fading Background Slideshow */
+    /* Hero Section with Moving Photo Slideshow */
     .hero {
       position: relative;
       text-align: center;
-      padding: 5rem 1.5rem;
-      border-bottom: 2px solid var(--accent);
+      padding: 5.5rem 1.5rem;
+      border-bottom: 2px solid #d4a373;
       overflow: hidden;
       color: #ffffff;
+      background-color: #3d1c06;
     }
 
-    /* Background Slideshow Layers */
     .hero-slide {
       position: absolute;
       top: 0;
@@ -106,25 +100,21 @@
       z-index: 1;
     }
 
-    /* Image 1: Green Tea Garden */
     .slide-1 {
-      background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1600&q=80');
+      background-image: url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=1600&q=80');
       animation-delay: 0s;
     }
 
-    /* Image 2: Loose Tea Leaves & Dried Chai Patti */
     .slide-2 {
-      background-image: url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=1600&q=80');
+      background-image: url('https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1600&q=80');
       animation-delay: 5s;
     }
 
-    /* Image 3: Warm Tea Ambience */
     .slide-3 {
       background-image: url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1600&q=80');
       animation-delay: 10s;
     }
 
-    /* Dark Warm Overlay for Readability */
     .hero-overlay {
       position: absolute;
       top: 0;
@@ -135,7 +125,6 @@
       z-index: 2;
     }
 
-    /* Foreground Content */
     .hero-content {
       position: relative;
       z-index: 3;
@@ -147,14 +136,14 @@
       font-size: 2.5rem;
       color: #faedcd;
       margin-bottom: 0.8rem;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     }
 
     .hero p {
       font-size: 1.2rem;
       margin: 0 auto 1.8rem;
       color: #ffffff;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
 
     .cta-buttons {
@@ -170,17 +159,13 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: all 0.2s ease;
       display: inline-block;
     }
 
     .btn-primary {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
+      background: #8b4513;
+      color: #ffffff;
+      border: 2px solid #8b4513;
     }
 
     .btn-secondary {
@@ -191,19 +176,17 @@
 
     .btn-secondary:hover {
       background: #faedcd;
-      color: var(--primary-dark);
+      color: #5c2c0a;
     }
 
-    /* Smooth Fade Animation */
     @keyframes crossfade {
       0% { opacity: 0; transform: scale(1); }
       10% { opacity: 1; }
-      33.33% { opacity: 1; }
-      43.33% { opacity: 0; transform: scale(1.04); }
+      33% { opacity: 1; }
+      43% { opacity: 0; transform: scale(1.04); }
       100% { opacity: 0; }
     }
 
-    /* Common Container */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -213,7 +196,7 @@
     h2.section-title {
       text-align: center;
       font-size: 1.9rem;
-      color: var(--primary-dark);
+      color: #5c2c0a;
       margin-bottom: 2rem;
       position: relative;
     }
@@ -222,19 +205,18 @@
       content: "";
       width: 50px;
       height: 3px;
-      background: var(--accent);
+      background: #d4a373;
       display: block;
       margin: 8px auto 0;
       border-radius: 2px;
     }
 
-    /* Story Card */
     .story-card {
-      background: var(--card-bg);
+      background: #ffffff;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      border-left: 5px solid var(--primary);
+      border-left: 5px solid #8b4513;
     }
 
     .story-card p {
@@ -246,7 +228,6 @@
       margin-bottom: 0;
     }
 
-    /* Product Grid */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -254,11 +235,11 @@
     }
 
     .product-card {
-      background: var(--card-bg);
+      background: #ffffff;
       padding: 1.8rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      border-top: 4px solid var(--primary);
+      border-top: 4px solid #8b4513;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -266,13 +247,13 @@
 
     .product-card h3 {
       font-size: 1.25rem;
-      color: var(--primary-dark);
+      color: #5c2c0a;
       margin-bottom: 0.6rem;
     }
 
     .product-desc {
       font-size: 0.95rem;
-      color: var(--text-muted);
+      color: #606c38;
       margin-bottom: 1rem;
     }
 
@@ -290,7 +271,7 @@
     .pack-badge {
       display: inline-block;
       font-size: 0.85rem;
-      color: var(--primary-dark);
+      color: #5c2c0a;
       font-weight: 600;
       background: #faedcd;
       padding: 6px 10px;
@@ -298,12 +279,11 @@
       margin-top: auto;
     }
 
-    /* Visit Section */
     .visit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      background: var(--card-bg);
+      background: #ffffff;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -315,7 +295,7 @@
 
     .info-block strong {
       display: block;
-      color: var(--primary);
+      color: #8b4513;
       margin-bottom: 0.3rem;
     }
 
@@ -326,13 +306,12 @@
       border-radius: 8px;
     }
 
-    /* Floating WhatsApp Button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: var(--whatsapp);
-      color: #fff;
+      background-color: #25d366;
+      color: #ffffff;
       padding: 12px 20px;
       border-radius: 50px;
       text-decoration: none;
@@ -343,14 +322,8 @@
       gap: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       z-index: 1000;
-      transition: background-color 0.2s;
     }
 
-    .whatsapp-float:hover {
-      background-color: #1ebc57;
-    }
-
-    /* Responsive Adjustments */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -358,13 +331,14 @@
         text-align: center;
         padding: 1rem;
       }
-      nav .logo {
+      .nav-brand {
         flex-direction: column;
         gap: 8px;
       }
-      nav .shop-title {
+      .shop-title {
         font-size: 1.4rem;
         letter-spacing: 1px;
+        white-space: normal;
       }
       .visit-grid {
         grid-template-columns: 1fr;
@@ -382,7 +356,7 @@
 
   <!-- Navigation Header Banner -->
   <nav>
-    <div class="logo">
+    <div class="nav-brand">
       <img src="logo.png" alt="Radha Govindo Tea Stall Logo">
       <span class="shop-title">RADHA GOVINDO TEA STALL</span>
     </div>
@@ -393,7 +367,7 @@
     </div>
   </nav>
 
-  <!-- Hero Header with 3-Image Slideshow Background -->
+  <!-- Hero Header with Moving Photo Slideshow -->
   <header class="hero">
     <div class="hero-slide slide-1"></div>
     <div class="hero-slide slide-2"></div>
@@ -402,7 +376,7 @@
 
     <div class="hero-content">
       <h1>Quality Loose Tea & Daily Supplies</h1>
-      <p>Providing premium CTC & leaf tea, packaged milk powder, and reliable disposable plates and bowls for household and wholesale needs.</p>
+      <p>Providing premium Green Tea, CTC & leaf tea, packaged milk powder, and reliable disposable plates and bowls for household and wholesale needs.</p>
       <div class="cta-buttons">
         <a href="#products" class="btn btn-primary">View Products</a>
         <a href="#visit" class="btn btn-secondary">Find Our Shop</a>
@@ -414,7 +388,7 @@
   <section class="container" id="story">
     <h2 class="section-title">Our Story</h2>
     <div class="story-card">
-      <p>For over 25 years, our shop has served the Santipur community as a trusted destination for quality loose tea and daily essentials.</p>
+      <p>For over 50 years, our shop has served the Santipur community as a trusted destination for quality loose tea and daily essentials.</p>
       <p>We supply carefully selected CTC and loose tea leaf blends for rich, full-bodied home brewing, alongside trusted packaged dairy milk powder. We also stock durable food plates and bowls for family events, gatherings, and local catering needs—all available at fair retail and bulk rates.</p>
     </div>
   </section>
@@ -433,6 +407,7 @@
             <li><strong>Premium Kadak CTC:</strong> Rich color and strong aroma</li>
             <li><strong>Daily Family Blend:</strong> Balanced flavor for regular brewing</li>
             <li><strong>Strong Hotel Blend:</strong> Deep liquor and high yield</li>
+            <li><strong>Pure Green Tea:</strong> Fresh and antioxidant-rich leaf</li>
           </ul>
         </div>
         <span class="pack-badge">Available in 100g, 250g, 500g, 1kg & bulk</span>
@@ -471,11 +446,10 @@
   <section class="container" id="visit">
     <h2 class="section-title">Visit Us</h2>
     <div class="visit-grid">
-      
       <div>
         <div class="info-block">
           <strong>📍 Address</strong>
-          <p>Radha Govindo Tea Stall,<br>Madangopal Para, Santipur,<br>West Bengal - 741404</p>
+          <p>Radha Govindo Tea Stall,<br>Netaji Subhas Road, Near Dakghar Bus Stop, Santipur,<br>West Bengal - 741404</p>
         </div>
 
         <div class="info-block">
@@ -500,11 +474,10 @@
           loading="lazy">
         </iframe>
       </div>
-
     </div>
   </section>
 
-  <!-- Floating WhatsApp Action -->
+  <!-- WhatsApp Action -->
   <a href="https://wa.me/919933125263?text=Hi!%20I%20saw%20your%20shop%20website%20and%20wanted%20to%20inquire%20about%20tea%20and%20supplies." class="whatsapp-float" target="_blank">
     💬 Chat / Order on WhatsApp
   </a>
