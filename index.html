@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radha GovindO Tea Stall | Authentic Chai & Traditional Snacks</title>
+  <title>Radha Govindo Tea Stall | Quality Loose Tea & Disposable Supplies</title>
   <style>
     :root {
-      --primary: #8b4513;       /* Warm tea color */
-      --primary-dark: #5c2c0a;  /* Deep roasted tone */
-      --accent: #d4a373;        /* Warm biscuit/clay color */
-      --bg: #fefae0;            /* Soft cream background */
+      --primary: #8b4513;        /* Warm tea brown */
+      --primary-dark: #5c2c0a;   /* Deep roasted brown */
+      --accent: #d4a373;         /* Biscuit / clay accent */
+      --bg: #fefae0;             /* Soft cream page background */
       --card-bg: #ffffff;
       --text: #283618;
       --text-muted: #606c38;
@@ -30,66 +30,75 @@
       padding-bottom: 70px;
     }
 
-    /* Navigation */
+    /* Navigation Header Banner */
     nav {
       background: var(--primary-dark);
       color: #fff;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
-nav .logo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
-nav .logo img {
-  height: 80px;
-  width: auto;
-  display: block;
-  border-radius: 8px;
-}
+    nav .logo img {
+      height: 65px;
+      width: auto;
+      display: block;
+      border-radius: 6px;
+    }
 
-nav .shop-title {
-  font-size: 2.4rem;
-  font-weight: 900;
-  letter-spacing: 2.5px;
-  color: #ffffff;
-  text-transform: uppercase;
-}
+    nav .shop-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
 
-    nav a {
-      color: #fff;
+    nav .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav .nav-links a {
+      color: #faedcd;
       text-decoration: none;
-      margin-left: 1.2rem;
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffffff;
     }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 4rem 1.5rem;
+      padding: 3.5rem 1.5rem;
       background: linear-gradient(135deg, #faedcd 0%, #e9edc9 100%);
       border-bottom: 2px solid var(--accent);
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       color: var(--primary-dark);
       margin-bottom: 0.8rem;
     }
 
     .hero p {
       font-size: 1.15rem;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 1.8rem;
       color: var(--text);
     }
@@ -102,7 +111,7 @@ nav .shop-title {
     }
 
     .btn {
-      padding: 0.75rem 1.4rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 25px;
       text-decoration: none;
       font-weight: 600;
@@ -131,7 +140,7 @@ nav .shop-title {
       color: #fff;
     }
 
-    /* Sections Common */
+    /* Common Container */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -156,59 +165,77 @@ nav .shop-title {
       border-radius: 2px;
     }
 
-    /* Story Section */
+    /* Story Card */
     .story-card {
       background: var(--card-bg);
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       border-left: 5px solid var(--primary);
     }
 
     .story-card p {
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       font-size: 1.05rem;
     }
 
-    /* Menu Grid */
-    .menu-grid {
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Product Grid */
+    .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
     }
 
-    .menu-category {
+    .product-card {
       background: var(--card-bg);
       padding: 1.8rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .menu-category h3 {
-      font-size: 1.25rem;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-      border-bottom: 1px dashed var(--accent);
-      padding-bottom: 0.4rem;
-    }
-
-    .menu-item {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--primary);
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      margin-bottom: 0.9rem;
-      font-size: 1rem;
     }
 
-    .menu-item .item-name {
-      font-weight: 500;
-    }
-
-    .menu-item .item-price {
-      font-weight: 700;
+    .product-card h3 {
+      font-size: 1.25rem;
       color: var(--primary-dark);
+      margin-bottom: 0.6rem;
     }
 
-    /* Visit & Timing */
+    .product-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .product-list {
+      list-style: none;
+      margin-bottom: 1.2rem;
+    }
+
+    .product-list li {
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(92, 44, 10, 0.15);
+      font-size: 0.95rem;
+    }
+
+    .pack-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      background: #faedcd;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: auto;
+    }
+
+    /* Visit Section */
     .visit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -216,7 +243,7 @@ nav .shop-title {
       background: var(--card-bg);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
     .info-block {
@@ -231,7 +258,7 @@ nav .shop-title {
 
     .map-container iframe {
       width: 100%;
-      height: 230px;
+      height: 250px;
       border: 0;
       border-radius: 8px;
     }
@@ -251,35 +278,50 @@ nav .shop-title {
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       z-index: 1000;
+      transition: background-color 0.2s;
     }
 
     .whatsapp-float:hover {
       background-color: #1ebc57;
     }
 
-    /* Responsive */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 1rem;
+      }
+      nav .logo {
+        flex-direction: column;
+        gap: 8px;
+      }
+      nav .shop-title {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+      }
       .visit-grid {
         grid-template-columns: 1fr;
       }
       .hero h1 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
 
-<!-- Navigation Header Banner -->
+  <!-- Navigation Header Banner -->
   <nav>
     <div class="logo">
       <img src="logo.png" alt="Radha Govindo Tea Stall Logo">
       <span class="shop-title">RADHA GOVINDO TEA STALL</span>
     </div>
     <div class="nav-links">
-      <a href="#menu">Menu</a>
+      <a href="#products">Products</a>
       <a href="#story">About</a>
       <a href="#visit">Visit</a>
     </div>
@@ -287,10 +329,10 @@ nav .shop-title {
 
   <!-- Hero Header -->
   <header class="hero">
-    <h1>Authentic Kadak Chai & Refreshments</h1>
-    <p>Providing premium CTC, aromatic loose tea leaf blends, and whole spices for the perfect home-brewed cup every single day.</p>
+    <h1>Quality Loose Tea & Daily Supplies</h1>
+    <p>Providing premium CTC & leaf tea, packaged milk powder, and reliable disposable plates and bowls for household and wholesale needs.</p>
     <div class="cta-buttons">
-      <a href="#menu" class="btn btn-primary">Explore Menu</a>
+      <a href="#products" class="btn btn-primary">View Products</a>
       <a href="#visit" class="btn btn-secondary">Find Our Shop</a>
     </div>
   </header>
@@ -298,65 +340,55 @@ nav .shop-title {
   <!-- About / Story Section -->
   <section class="container" id="story">
     <h2 class="section-title">Our Story</h2>
-<div class="story-box">
-  <p>For over 25 years, our shop has been dedicated to a simple standard: <em>exceptional tea leaves make the best cup of tea.</em></p>
-  <p>We source and blend select CTC grains, aromatic orthodox leaf teas, and fresh whole spices (green cardamom, cloves, and ginger) so you can enjoy rich, authentic flavor right at home. Whether you need daily family blends or bulk supplies, we guarantee fresh quality in every pack.</p>
-</div>
+    <div class="story-card">
+      <p>For over 25 years, our shop has served the Santipur community as a trusted destination for quality loose tea and daily essentials.</p>
+      <p>We supply carefully selected CTC and loose tea leaf blends for rich, full-bodied home brewing, alongside trusted packaged dairy milk powder. We also stock durable food plates and bowls for family events, gatherings, and local catering needs—all available at fair retail and bulk rates.</p>
+    </div>
   </section>
 
-  <!-- Menu Section -->
-  <section class="container" id="menu">
-    <h2 class="section-title">Shop Menu</h2>
-    <div class="menu-grid">
-      
-      <!-- Category 1: Hot Teas -->
-      <div class="menu-category">
-        <h3>Signature Brews</h3>
-        <div class="menu-item">
-          <span class="item-name">Special Kadak Masala Chai</span>
-          <span class="item-price">₹15</span>
+  <!-- Products Section -->
+  <section class="container" id="products">
+    <h2 class="section-title">What We Sell</h2>
+    <div class="product-grid">
+
+      <!-- Product 1: Loose Tea -->
+      <div class="product-card">
+        <div>
+          <h3>🍃 Quality Loose Tea (Chai Patti)</h3>
+          <p class="product-desc">Strong, aromatic tea leaves suited for daily household cups and tea vendors.</p>
+          <ul class="product-list">
+            <li><strong>Premium Kadak CTC:</strong> Rich color and strong aroma</li>
+            <li><strong>Daily Family Blend:</strong> Balanced flavor for regular brewing</li>
+            <li><strong>Strong Hotel Blend:</strong> Deep liquor and high yield</li>
+          </ul>
         </div>
-        <div class="menu-item">
-          <span class="item-name">Shahi Elaichi (Cardamom) Chai</span>
-          <span class="item-price">₹20</span>
-        </div>
-        <div class="menu-item">
-          <span class="item-name">Adrak (Ginger) Chai</span>
-          <span class="item-price">₹15</span>
-        </div>
-        <div class="menu-item">
-          <span class="item-name">Black / Lemon Tea</span>
-          <span class="item-price">₹12</span>
-        </div>
-        <div class="menu-item">
-          <span class="item-name">Honey Green Tea</span>
-          <span class="item-price">₹25</span>
-        </div>
+        <span class="pack-badge">Available in 100g, 250g, 500g, 1kg & bulk</span>
       </div>
 
-      <!-- Category 2: Snacks & Bites -->
-      <div class="menu-category">
-        <h3>Crispy Snacks & Bakery</h3>
-        <div class="menu-item">
-          <span class="item-name">Hot Samosa (Per Piece)</span>
-          <span class="item-price">₹15</span>
+      <!-- Product 2: Packaged Milk Powder -->
+      <div class="product-card">
+        <div>
+          <h3>🥛 Packaged Milk Powder</h3>
+          <p class="product-desc">Sealed, hygienic dairy whiteners for creamy tea, desserts, and daily use.</p>
+          <ul class="product-list">
+            <li><strong>Instant Dairy Milk Powder:</strong> Dissolves easily with rich flavor</li>
+            <li><strong>Sealed Brand Packs:</strong> Guaranteed fresh and long-lasting</li>
+          </ul>
         </div>
-        <div class="menu-item">
-          <span class="item-name">Dal Kachori with Chutney</span>
-          <span class="item-price">₹15</span>
+        <span class="pack-badge">Available in retail pouches & multi-pack sets</span>
+      </div>
+
+      <!-- Product 3: Disposable Dining Supplies -->
+      <div class="product-card">
+        <div>
+          <h3>🍽️ Disposable Plates & Bowls</h3>
+          <p class="product-desc">Hygienic tableware for pujas, parties, picnics, and catering services.</p>
+          <ul class="product-list">
+            <li><strong>Food Plates (Thali):</strong> Sturdy disposable meal plates</li>
+            <li><strong>Small Bowls (Bati):</strong> Ideal for sweets, curries, chat, & prasad</li>
+          </ul>
         </div>
-        <div class="menu-item">
-          <span class="item-name">Fresh Bun Maska</span>
-          <span class="item-price">₹30</span>
-        </div>
-        <div class="menu-item">
-          <span class="item-name">Butter Toast</span>
-          <span class="item-price">₹25</span>
-        </div>
-        <div class="menu-item">
-          <span class="item-name">Special Tea Rusk / Biscuits</span>
-          <span class="item-price">₹10</span>
-        </div>
+        <span class="pack-badge">Sold in dasta (bundles) & bulk packs</span>
       </div>
 
     </div>
@@ -370,7 +402,7 @@ nav .shop-title {
       <div>
         <div class="info-block">
           <strong>📍 Address</strong>
-          <p>Radha Govindo Tea Stall, Shop No. 4, Main Market Road,<br>Near Dakghar Bus Stand, Santipur, West Bengal - 741404</p>
+          <p>Radha Govindo Tea Stall,<br>Madangopal Para, Santipur,<br>West Bengal - 741404</p>
         </div>
 
         <div class="info-block">
@@ -386,23 +418,21 @@ nav .shop-title {
 
       <!-- Google Maps Embed -->
       <div class="map-container">
-        <!-- Replace the src below with your Google Maps embed code -->
-<iframe 
-  src="https://maps.google.com/maps?q=23.242820,88.434550&hl=en&z=18&output=embed" 
-  width="100%" 
-  height="300" 
-  style="border:0; border-radius: 8px;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
+        <iframe 
+          src="https://maps.google.com/maps?q=23.242820,88.434550&hl=en&z=18&output=embed" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
       </div>
 
     </div>
   </section>
 
   <!-- Floating WhatsApp Action -->
-  <!-- Replace 919876543210 with your real 10-digit number preceded by 91 -->
-  <a href="https://wa.me/919933125263?text=Hi!%20I%20saw%20your%20tea%20shop%20website%20and%20wanted%20to%20connect." class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/919933125263?text=Hi!%20I%20saw%20your%20shop%20website%20and%20wanted%20to%20inquire%20about%20tea%20and%20supplies." class="whatsapp-float" target="_blank">
     💬 Chat / Order on WhatsApp
   </a>
 
