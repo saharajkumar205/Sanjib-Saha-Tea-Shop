@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radha Govindo Tea Stall | Quality Loose Tea & Disposable Supplies</title>
+  <title>Radha Govindo Tea Stall | Quality Loose Tea & Daily Supplies</title>
   <style>
     :root {
       --primary: #8b4513;        /* Warm tea brown */
@@ -82,25 +82,79 @@
       color: #ffffff;
     }
 
-    /* Hero Section */
+    /* Hero Section with Auto-Fading Background Slideshow */
     .hero {
+      position: relative;
       text-align: center;
-      padding: 3.5rem 1.5rem;
-      background: linear-gradient(135deg, #faedcd 0%, #e9edc9 100%);
+      padding: 5rem 1.5rem;
       border-bottom: 2px solid var(--accent);
+      overflow: hidden;
+      color: #ffffff;
+    }
+
+    /* Background Slideshow Layers */
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: crossfade 15s infinite;
+      z-index: 1;
+    }
+
+    /* Image 1: Green Tea Garden */
+    .slide-1 {
+      background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 0s;
+    }
+
+    /* Image 2: Loose Tea Leaves & Dried Chai Patti */
+    .slide-2 {
+      background-image: url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 5s;
+    }
+
+    /* Image 3: Warm Tea Ambience */
+    .slide-3 {
+      background-image: url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 10s;
+    }
+
+    /* Dark Warm Overlay for Readability */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(35, 18, 5, 0.65);
+      z-index: 2;
+    }
+
+    /* Foreground Content */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 750px;
+      margin: 0 auto;
     }
 
     .hero h1 {
-      font-size: 2.3rem;
-      color: var(--primary-dark);
+      font-size: 2.5rem;
+      color: #faedcd;
       margin-bottom: 0.8rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .hero p {
-      font-size: 1.15rem;
-      max-width: 650px;
+      font-size: 1.2rem;
       margin: 0 auto 1.8rem;
-      color: var(--text);
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
     }
 
     .cta-buttons {
@@ -131,13 +185,22 @@
 
     .btn-secondary {
       background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--primary);
+      color: #faedcd;
+      border: 2px solid #faedcd;
     }
 
     .btn-secondary:hover {
-      background: var(--primary);
-      color: #fff;
+      background: #faedcd;
+      color: var(--primary-dark);
+    }
+
+    /* Smooth Fade Animation */
+    @keyframes crossfade {
+      0% { opacity: 0; transform: scale(1); }
+      10% { opacity: 1; }
+      33.33% { opacity: 1; }
+      43.33% { opacity: 0; transform: scale(1.04); }
+      100% { opacity: 0; }
     }
 
     /* Common Container */
@@ -287,7 +350,7 @@
       background-color: #1ebc57;
     }
 
-    /* Responsive adjustments */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -305,6 +368,9 @@
       }
       .visit-grid {
         grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 3.5rem 1rem;
       }
       .hero h1 {
         font-size: 1.8rem;
@@ -327,13 +393,20 @@
     </div>
   </nav>
 
-  <!-- Hero Header -->
+  <!-- Hero Header with 3-Image Slideshow Background -->
   <header class="hero">
-    <h1>Quality Loose Tea & Daily Supplies</h1>
-    <p>Providing premium CTC & leaf tea, packaged milk powder, and reliable disposable plates and bowls for household and wholesale needs.</p>
-    <div class="cta-buttons">
-      <a href="#products" class="btn btn-primary">View Products</a>
-      <a href="#visit" class="btn btn-secondary">Find Our Shop</a>
+    <div class="hero-slide slide-1"></div>
+    <div class="hero-slide slide-2"></div>
+    <div class="hero-slide slide-3"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Quality Loose Tea & Daily Supplies</h1>
+      <p>Providing premium CTC & leaf tea, packaged milk powder, and reliable disposable plates and bowls for household and wholesale needs.</p>
+      <div class="cta-buttons">
+        <a href="#products" class="btn btn-primary">View Products</a>
+        <a href="#visit" class="btn btn-secondary">Find Our Shop</a>
+      </div>
     </div>
   </header>
 
@@ -416,7 +489,7 @@
         </div>
       </div>
 
-      <!-- Google Maps Embed -->
+      <!-- Google Maps Embed Pin -->
       <div class="map-container">
         <iframe 
           src="https://maps.google.com/maps?q=23.242820,88.434550&hl=en&z=18&output=embed" 
